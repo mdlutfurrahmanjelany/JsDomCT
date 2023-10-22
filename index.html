@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deshbord of Bank</title>
+    <link rel="icon" href="./bank.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./index.css">
+
+
+</head>
+
+<body>
+    <section class="container mx-auto mt-2">
+        
+        <div class="grid grid-cols-3">
+            <div class="col-span-1"></div>
+            <div class="col-span-1">
+                <canvas id="myChart"></canvas>
+            </div>
+    </section>
+    <main class="bg-green-200 my-2 text-center">
+        <section class=" w-4/5 mx-auto ">
+            <div class="grid grid-cols-3 gap-4 mb-1">
+                <!-- user er (doposit) korar poriman -->
+                <div class=" bg-green-600 rounded-3xl">
+                    <h4 class="text-4xl font-bold text-white mb-2 ">Deposit</h4>
+                    <h2 class="text-6xl text-white font-semibold">$<span id="depositAdd">00</span></h2>
+                </div>
+                <!-- user er (withdraw) er poriman -->
+                <div class=" bg-pink-400 rounded-3xl">
+                    <h4 class="text-4xl font-bold text-white mb-2">Withdraw</h4>
+                    <h2 class="text-6xl text-white font-semibold">$<span id="withdrawAdd">00</span></h2>
+                </div>
+                <!-- Bank er total (Balance) -->
+                <div class=" bg-orange-500 rounded-3xl">
+                    <h4 class="text-4xl font-bold text-white mb-2">Balance</h4>
+                    <h2 class="text-6xl text-white font-semibold">$<span id="balanceAdd">100</span></h2>
+                </div>
+            </div>
+        </section>
+        <section class="grid grid-cols-2 gap-5 pb-10 w-4/5 mx-auto">
+            <div class="bg-blue-400 py-5 px-9 rounded-3xl">               
+                <!-- user er deposit taka add korar (input field) -->
+                <input id="user-Deposit" class="w-3/4 text-xl block mx-auto py-2 rounded-lg px-5" type="text"
+                    placeholder="$ amount you want to deposit">
+                <!-- user er deposit take add korar (button) -->
+                <input type="submit" id="Deposit-btn"
+                    class="py-2 px-10 bg-indigo-800 font-semibold text-white text-lg ml-14 my-5 rounded-lg transition ease-out delay-350 hover:scale-110 hover:bg-yellow-500 duration-100 cursor-pointer active:bg-lime-600 active:text-white active:border-solid active:border-2 active:border-white border-transparent border-2"
+                    value="Deposit">
+            </div>
+            <div class="bg-red-400 py-5 px-9 rounded-3xl">                
+                <!-- user er Withdraw taka grohon korar (input field) -->
+                <input id="user-Withdraw" class="w-3/4 text-xl block mx-auto py-2 rounded-lg px-5" type="text"
+                    placeholder="$ amount you want to Withdraw">
+                <!-- user er Withdraw take grohon korar (button) -->
+                <input type="submit" id="Withdraw-btn"
+                    class="py-2 px-10 bg-indigo-800 font-semibold text-white text-lg ml-14 my-5 rounded-lg transition ease-out delay-350 hover:scale-110 hover:bg-yellow-500 duration-100 cursor-pointer active:bg-lime-600 active:text-white active:border-solid active:border-2 active:border-white border-transparent border-2"
+                    value="Withdraw">
+            </div>
+        </section>
+    </main>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
