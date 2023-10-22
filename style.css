@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#qrcode:hover {
+    border: 2px solid #0d0664;
+    transition: .1s;
+}
+#qr-data:focus {
+    border: 2px solid #0d0d11;
+    transition: .2s;
+}
